@@ -55,4 +55,7 @@ docker-compose stop
 
 rm -rf .git
 rm -rf node_modules
+
 # ReactSomeCode
+
+## Travis CI

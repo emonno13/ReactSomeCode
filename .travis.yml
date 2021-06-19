@@ -1,0 +1,16 @@
+language: generic
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t emonno13/ReactSomeCode -f dockerfile .
+
+script:
+  - docker run -e CI=true emonno13/ReactSomeCode npm run test
+
+after_success:
+  - docker build -t emonno13/ReactSomeCode .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push emonno13/ReactSomeCode

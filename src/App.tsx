@@ -1,12 +1,11 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, lazy, Suspense } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
 import './App.css';
 
-import AccountView from './views/AccountView';
-import MainView from './views/MainView';
-
-import AccountLayout from './layouts/AccountLayout';
-import MainLayout from './layouts/MainLayout';
+const AccountView = lazy(() => import('views/AccountView'));
+const MainView = lazy(() => import('views/MainView'));
+const AccountLayout = lazy(() => import('layouts/AccountLayout'));
+const MainLayout = lazy(() => import('layouts/MainLayout'));
 
 // import PageNotFoundView from './error/PageNotFoundView';
 
@@ -16,7 +15,7 @@ interface AppType {
   children?: ReactNode;
 }
 
-const App: React.FC<AppType> = () => {
+const App: React.FC<AppType> = (): JSX.Element => {
   const mainRoutes = {
     path: '/',
     element: <MainLayout />,
@@ -48,7 +47,7 @@ const App: React.FC<AppType> = () => {
 
   const routing = useRoutes([mainRoutes, accountRoutes]);
 
-  return <>{routing}</>;
+  return <Suspense fallback={<div>Loading... </div>}>{routing}</Suspense>;
 };
 
 export default App;

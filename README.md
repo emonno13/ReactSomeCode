@@ -64,5 +64,18 @@ rm -rf node_modules
 ## Eslint
 https://andrebnassis.medium.com/setting-eslint-on-a-react-typescript-project-2021-1190a43ffba
 https://dev.to/thatanjan/setup-eslint-prettier-with-typescript-and-react-3loe
-
+Bug fix: https://newbedev.com/failed-to-load-config-airbnb-base-to-extend-from-code-example
 Run at root : npx eslint src/* --fix
+
+
+## Router
+Testing V6:
+https://typescript.tv/react/upgrade-to-react-router-v6/#React-Router-v6
+https://reacttraining.com/blog/react-router-v6-pre/
+
+Bug fix: yarn add history react-router-dom@next
+
+## Cache
+npm cache clear --force
+npm cache rm --force
+npm cache verify 

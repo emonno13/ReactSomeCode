@@ -2,6 +2,8 @@ import React, { ReactNode, lazy, Suspense } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
 import './style.css';
 
+const ErrorBoundary = lazy(() => import('./ErrorBoundary'));
+
 const AccountView = lazy(() => import('views/AccountView'));
 const MainView = lazy(() => import('views/MainView'));
 const AccountLayout = lazy(() => import('layouts/AccountLayout'));
@@ -64,7 +66,11 @@ const Route: React.FC<RouteType> = (): JSX.Element => {
 
   const routing = useRoutes([authRoutes, mainRoutes, accountRoutes]);
 
-  return <Suspense fallback={<div>Loading... </div>}>{routing}</Suspense>;
+  return (
+    <Suspense fallback={<div>Loading... </div>}>
+      <ErrorBoundary>{routing}</ErrorBoundary>
+    </Suspense>
+  );
 };
 
 export default Route;

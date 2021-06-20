@@ -79,3 +79,7 @@ Bug fix: yarn add history react-router-dom@next
 npm cache clear --force
 npm cache rm --force
 npm cache verify 
+
+## TODOS
+add axios
+add authentication

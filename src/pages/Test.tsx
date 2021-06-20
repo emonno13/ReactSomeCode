@@ -1,27 +1,25 @@
 import React, { ReactNode } from 'react';
-import Test from './pages/Test';
-import './App.css';
+import { Counter } from 'features/counter/Counter';
+import logo from 'logo.svg';
+import './Test.css';
 
-interface AppType {
-  // Counter: CounterType;
+interface TestType {
   name?: string;
   children?: ReactNode;
 }
 
-const App: React.FC<AppType> = ({ name }) => (
-  <div className="App">
-    <p>{name}</p>
-    <Test />
-    {/* <header className="App-header">
-      <img src={logo} className="App-logo" alt="lsogo" />
+const Test: React.FC<TestType> = ({ name }): JSX.Element => (
+  <div className="Test">
+    <header className="Test-header">
+      <img src={logo} className="Test-logo" alt="lsogo" />
       <Counter />
       <p>
-        Edit <code>src/App.tsx</code> and save to reload. {name}
+        Edit <code>src/Test.tsx</code> and save to reload. {name}
       </p>
       <span>
         <span>Learn </span>
         <a
-          className="App-link"
+          className="Test-link"
           href="https://reactjs.org/"
           target="_blank"
           rel="noopener noreferrer"
@@ -30,7 +28,7 @@ const App: React.FC<AppType> = ({ name }) => (
         </a>
         <span>, </span>
         <a
-          className="App-link"
+          className="Test-link"
           href="https://redux.js.org/"
           target="_blank"
           rel="noopener noreferrer"
@@ -39,7 +37,7 @@ const App: React.FC<AppType> = ({ name }) => (
         </a>
         <span>, </span>
         <a
-          className="App-link"
+          className="Test-link"
           href="https://redux-toolkit.js.org/"
           target="_blank"
           rel="noopener noreferrer"
@@ -48,7 +46,7 @@ const App: React.FC<AppType> = ({ name }) => (
         </a>
         ,<span> and </span>
         <a
-          className="App-link"
+          className="Test-link"
           href="https://react-redux.js.org/"
           target="_blank"
           rel="noopener noreferrer"
@@ -56,8 +54,8 @@ const App: React.FC<AppType> = ({ name }) => (
           React Redux
         </a>
       </span>
-    </header> */}
+    </header>
   </div>
 );
 
-export default App;
+export default Test;

@@ -1,3 +1,54 @@
+## TODOS
+add redux-tool-kit
+add redux saga
+add docker
+add eslint prettier
+add react-router-v6
+add err boundary
+add axios
+add cypress
+
+## DOCKER
+
+# https://mherman.org/blog/dockerizing-a-react-app/
+
+docker build -t sample:dev .
+docker-compose up -d --build
+docker-compose stop
+
+## GIT
+
+rm -rf .git
+rm -rf node_modules
+
+# ReactSomeCode
+
+## Travis CI
+
+
+## Eslint
+https://andrebnassis.medium.com/setting-eslint-on-a-react-typescript-project-2021-1190a43ffba
+https://dev.to/thatanjan/setup-eslint-prettier-with-typescript-and-react-3loe
+Bug fix: https://newbedev.com/failed-to-load-config-airbnb-base-to-extend-from-code-example
+Run at root : npx eslint src/* --fix
+
+## Update Latest NPM
+https://www.npmjs.com/package/npm-check
+https://dev.to/craigaholliday/how-to-update-all-your-npm-packages-at-once-458j
+## Router
+Testing V6:
+https://typescript.tv/react/upgrade-to-react-router-v6/#React-Router-v6
+https://reacttraining.com/blog/react-router-v6-pre/
+
+Bug fix: yarn add history react-router-dom@next
+
+## Cache
+npm cache clear --force
+npm cache rm --force
+npm cache verify 
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
@@ -43,45 +94,3 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-## DOCKER
-
-# https://mherman.org/blog/dockerizing-a-react-app/
-
-docker build -t sample:dev .
-docker-compose up -d --build
-docker-compose stop
-
-## GIT
-
-rm -rf .git
-rm -rf node_modules
-
-# ReactSomeCode
-
-## Travis CI
-
-
-## Eslint
-https://andrebnassis.medium.com/setting-eslint-on-a-react-typescript-project-2021-1190a43ffba
-https://dev.to/thatanjan/setup-eslint-prettier-with-typescript-and-react-3loe
-Bug fix: https://newbedev.com/failed-to-load-config-airbnb-base-to-extend-from-code-example
-Run at root : npx eslint src/* --fix
-
-## Update Latest NPM
-https://www.npmjs.com/package/npm-check
-https://dev.to/craigaholliday/how-to-update-all-your-npm-packages-at-once-458j
-## Router
-Testing V6:
-https://typescript.tv/react/upgrade-to-react-router-v6/#React-Router-v6
-https://reacttraining.com/blog/react-router-v6-pre/
-
-Bug fix: yarn add history react-router-dom@next
-
-## Cache
-npm cache clear --force
-npm cache rm --force
-npm cache verify 
-
-## TODOS
-add axios
-add authentication

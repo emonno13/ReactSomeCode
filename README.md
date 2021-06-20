@@ -1,7 +1,8 @@
 ## TODOS
 
-redux-tool-kit  |   ✔
+Tech | Status
 --------|----------
+redux-tool-kit  |   ✔
 docker |    ✔ 
 redux saga |    ✔ 
 eslint |    ✔

@@ -67,7 +67,9 @@ https://dev.to/thatanjan/setup-eslint-prettier-with-typescript-and-react-3loe
 Bug fix: https://newbedev.com/failed-to-load-config-airbnb-base-to-extend-from-code-example
 Run at root : npx eslint src/* --fix
 
-
+## Update Latest NPM
+https://www.npmjs.com/package/npm-check
+https://dev.to/craigaholliday/how-to-update-all-your-npm-packages-at-once-458j
 ## Router
 Testing V6:
 https://typescript.tv/react/upgrade-to-react-router-v6/#React-Router-v6

@@ -1,5 +1,6 @@
 ## TODOS
 
+--------|----------
 redux-tool-kit  |   ✔
 docker |    ✔ 
 redux saga |    ✔ 

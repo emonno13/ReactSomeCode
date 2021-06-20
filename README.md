@@ -8,7 +8,7 @@ redux saga |    ✔
 eslint |    ✔
 prettier |  ✔
 react-router-v6 | ✔
-error boundary | 
+error boundary | ✔
 axios | 
 cypress | 
 

@@ -1,4 +1,24 @@
 ## TODOS
+
+redux-tool-kit  |  ✔
+------ | ---------- 
+docker | ✔ 
+------ | ---------- 
+redux saga | ✔ 
+------ | ---------- 
+eslint | ✔
+------ | ---------- 
+prettier | ✔
+------ | ---------- 
+react-router-v6 | ✔
+------ | ---------- 
+error boundary | ✔
+------ | ---------- 
+axios | ✔
+------ | ---------- 
+cypress | ✔
+
+
 add redux-tool-kit
 
 add redux saga

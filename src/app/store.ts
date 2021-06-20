@@ -1,9 +1,9 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-import createSagaMiddleware from 'redux-saga'
+import createSagaMiddleware from 'redux-saga';
+import counterReducer from 'features/counter/counterSlice';
 import rootSaga from './rootSaga';
 
-const sagaMiddleware = createSagaMiddleware()
+const sagaMiddleware = createSagaMiddleware();
 
 export const store = configureStore({
   reducer: {
@@ -11,11 +11,11 @@ export const store = configureStore({
   },
   devTools: true,
   middleware: (getDefaultMiddleware) =>
-  getDefaultMiddleware({
-    thunk: true,
-    serializableCheck: true,
-    immutableCheck:true,
-  }).concat(sagaMiddleware),
+    getDefaultMiddleware({
+      thunk: true,
+      serializableCheck: true,
+      immutableCheck: true,
+    }).concat(sagaMiddleware),
 });
 
 sagaMiddleware.run(rootSaga);

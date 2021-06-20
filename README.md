@@ -59,3 +59,10 @@ rm -rf node_modules
 # ReactSomeCode
 
 ## Travis CI
+
+
+## Eslint
+https://andrebnassis.medium.com/setting-eslint-on-a-react-typescript-project-2021-1190a43ffba
+https://dev.to/thatanjan/setup-eslint-prettier-with-typescript-and-react-3loe
+
+Run at root : npx eslint src/* --fix

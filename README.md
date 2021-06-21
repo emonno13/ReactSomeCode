@@ -9,8 +9,11 @@ eslint |    ✔
 prettier |  ✔
 react-router-v6 | ✔
 error boundary | ✔
+alias |
 axios | 
 cypress | 
+jest |
+i18n |
 
 
 add redux-tool-kit

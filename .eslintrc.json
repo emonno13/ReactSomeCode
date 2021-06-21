@@ -90,7 +90,14 @@
     "settings": {
         "import/resolver": {
             "typescript": {}
-        }
+        },
+        "max-len": [
+            "error",
+            {
+                "code": 80,
+                "ignoreUrls": true
+            }
+        ]
     },
     "globals": {
         // React: true,

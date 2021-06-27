@@ -4,8 +4,11 @@ import './style.css';
 
 const ErrorBoundary = lazy(() => import('./ErrorBoundary'));
 
+const CounterView = lazy(() => import('views/Test'));
 const AccountView = lazy(() => import('views/AccountView'));
 const MainView = lazy(() => import('views/MainView'));
+
+const DefaultLayout = lazy(() => import('layouts/DefaultLayout'));
 const AccountLayout = lazy(() => import('layouts/AccountLayout'));
 const MainLayout = lazy(() => import('layouts/MainLayout'));
 
@@ -20,24 +23,15 @@ interface RouteType {
 const Route: React.FC<RouteType> = (): JSX.Element => {
   const isToken = false;
 
-  const authRoutes = {
-    path: '/login',
-    element: <AccountLayout />,
-    children: [
-      {
-        path: '/',
-        element: (
-          <>
-            <p>Login</p>
-          </>
-        ),
-      },
-    ],
+  const exampleRoutes = {
+    path: '/example',
+    element: <DefaultLayout />,
+    children: [{ path: '/', element: <CounterView /> }],
   };
 
   const mainRoutes = {
     path: '/',
-    element: isToken ? <MainLayout /> : <Navigate to="/login" />,
+    element: isToken ? <MainLayout /> : <Navigate to="/example" />,
     children: [
       { path: '*', element: <Navigate to="/404" /> },
       { path: '/', element: <MainView /> },
@@ -55,7 +49,7 @@ const Route: React.FC<RouteType> = (): JSX.Element => {
 
   const accountRoutes = {
     path: 'account',
-    element: isToken ? <AccountLayout /> : <Navigate to="/login" />,
+    element: isToken ? <AccountLayout /> : <Navigate to="/example" />,
     children: [
       { path: '*', element: <Navigate to="/404" /> },
       { path: ':id', element: <AccountView /> },
@@ -64,7 +58,7 @@ const Route: React.FC<RouteType> = (): JSX.Element => {
     ],
   };
 
-  const routing = useRoutes([authRoutes, mainRoutes, accountRoutes]);
+  const routing = useRoutes([exampleRoutes, mainRoutes, accountRoutes]);
 
   return (
     <Suspense fallback={<div>Loading... </div>}>

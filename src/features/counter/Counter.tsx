@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { useAppSelector, useAppDispatch } from 'redux/hooks';
 import {
   decrement,
   increment,
@@ -8,6 +8,7 @@ import {
   incrementAsync,
   incrementIfOdd,
   selectCount,
+  incrementSaga,
 } from './counterSlice';
 import styles from './Counter.module.css';
 
@@ -16,7 +17,7 @@ export interface CounterType {}
 export const Counter: React.FC<CounterType> = () => {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
-  const [incrementAmount, setIncrementAmount] = useState('2');
+  const [incrementAmount, setIncrementAmount] = useState('1');
 
   const incrementValue = Number(incrementAmount) || 0;
 
@@ -60,7 +61,14 @@ export const Counter: React.FC<CounterType> = () => {
           className={styles.asyncButton}
           onClick={() => dispatch(incrementAsync(incrementValue))}
         >
-          Add Async
+          Add Async Thunk
+        </button>
+        <button
+          type="button"
+          className={styles.asyncButton}
+          onClick={() => dispatch(incrementSaga(incrementValue))}
+        >
+          Add Async Saga
         </button>
         <button
           type="button"

@@ -11,6 +11,7 @@ import { fetchCount } from 'features/counter/counterAPI';
  * Worker saga will be fired on actions of saga parent: 
    - call api
    - call actions
+   - call generator function
  */
 function* worker(): Generator<unknown> {
   try {
@@ -29,7 +30,7 @@ function* worker(): Generator<unknown> {
     yield put({ type: 'counter/incrementByAmount', payload });
 
     /** Call a Function */
-    // Return a promise
+    // Return a promise - don't use this because it will be hard for testing
     yield fetchCount(2);
     // Return a js object
     yield call(fetchCount, 2);
@@ -63,6 +64,8 @@ function* handleIncrementSaga(
 }
 
 /**
+ * WATCHER 
+ 
  *  Yield - Pause Genarator - Effect Creator ( a function )
       => return Effect ( plian object ) -> next (result of yield) | throw(error)
  */
@@ -86,3 +89,8 @@ export function* counterSaga(): Generator<unknown> {
   // yield takeEvery(incrememntSaga().toString(), handleIncreamentSaga);
   yield takeLatest(incrementSaga.toString(), handleIncrementSaga);
 }
+
+/**
+ * CaLL : invoke function / generator function
+ * Put: dispatch an action
+ */

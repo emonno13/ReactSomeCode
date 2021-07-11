@@ -58,4 +58,4 @@ const Test: React.FC<TestType> = ({ name }): JSX.Element => (
   </div>
 );
 
-export default Test;
+export default React.memo(Test);

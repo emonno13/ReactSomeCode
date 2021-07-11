@@ -1,2 +1,5 @@
 *.css
 *.svg
+
+/src/serviceWorker.js
+/src/setupTests.js.js

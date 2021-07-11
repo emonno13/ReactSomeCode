@@ -16,24 +16,15 @@ jest |
 i18n |
 
 
-add redux-tool-kit
-
-add redux saga
-
-add docker
-
-add eslint prettier
-
-add react-router-v6
-
-add err boundary
-
-add axios
-
-add cypress
-
 ...
 
+React Developer Tools
+Redux DevTools
+Gitlens
+Auto Close Tag
+Auto Rename Tag
+Monokais
+Live servers
 ## DOCKER
 
 # https://mherman.org/blog/dockerizing-a-react-app/
